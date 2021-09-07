@@ -3,7 +3,9 @@ using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.Entities;
+using DSharpPlus.EventArgs;
 using C_SharpExampleBot.Commands;
+using C_SharpExampleBot;
 
 namespace C_SharpExampleBot
 {
@@ -28,7 +30,7 @@ namespace C_SharpExampleBot
                 StringPrefixes = new[] { "!" } //Change the prefix to whatever you feel comfortable with
             });
 
-            //commands.RegisterCommands<InformationCommands>();
+            commands.RegisterCommands<InformationCommands>();
             commands.RegisterCommands<ModerationCommands>();
             
             await discord.ConnectAsync();
